@@ -51,7 +51,7 @@ const CardEditor = ({
         <Input
           value={recipientName}
           onChange={(e) => onRecipientChange(e.target.value)}
-          placeholder="e.g., Ahmed"
+          placeholder="e.g., Mehedi Kaka"
           className="font-body bg-card border-border focus:ring-accent"
         />
       </div>
@@ -72,7 +72,7 @@ const CardEditor = ({
         <Input
           value={senderName}
           onChange={(e) => onSenderChange(e.target.value)}
-          placeholder="e.g., Fatima"
+          placeholder="e.g., Sharafat"
           className="font-body bg-card border-border focus:ring-accent"
         />
       </div>

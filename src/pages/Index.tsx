@@ -75,9 +75,8 @@ const Index = () => {
           {/* Preview - shown first on mobile */}
           <div className="w-full lg:order-2 flex flex-col items-center gap-3 lg:sticky lg:top-8">
             <h3 className="font-display text-lg font-bold text-foreground">Preview</h3>
-            <div className="w-full flex justify-center overflow-hidden">
-              <div className="card-scale-wrapper w-full" style={{ maxWidth: 600 }}>
-                <div style={{ width: 600, height: 400, transform: "scale(var(--card-scale))", transformOrigin: "top left" }}>
+            <div className="flex items-center justify-center w-full rounded-xl border border-border bg-white p-4 shadow-sm">
+                <div className="overflow-x-auto">
                   <CardCanvas
                     ref={cardRef}
                     template={template}
@@ -100,10 +99,12 @@ const Index = () => {
                     greetingFontSize={greetingFontSize}
                     messageFontSize={messageFontSize}
                     arabicFontSize={arabicFontSize}
-                  />
-                </div>
+                    />
               </div>
             </div>
+                    <div className="text-center text-xs text-muted-foreground mb-2 md:hidden">
+                      Scroll or drag right-left to see full preview on mobile.
+                    </div>
             {/* Export on mobile shown under preview */}
             <div className="w-full lg:hidden">
               <ExportActions cardRef={cardRef} />
